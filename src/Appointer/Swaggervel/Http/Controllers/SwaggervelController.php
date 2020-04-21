@@ -54,7 +54,7 @@ class SwaggervelController extends Controller
                 'additionalQueryStringParams' => json_encode(config('swaggervel.additional-query-string-params'), JSON_FORCE_OBJECT),
                 'useBasicAuthenticationWithAccessCodeGrant' => config('swaggervel.use-basic-auth-with-access-code-grant') ? 'true' : 'false',
                 'uiResourcePath' => config('swaggervel.ui-resource-path'),
-                'host' => $this->makeHost(),
+                'host' => $this->makeHost()."/",
             ])
             ->withHeaders(config('swaggervel.view-headers'));
     }
